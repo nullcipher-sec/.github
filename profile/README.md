@@ -37,5 +37,5 @@
 
 - Cada integrante desarrolla en su rama `dev/<usuario>`.
 - Todo cambio entra a `main` mediante Pull Request.
-- Las tareas de cada área están en los [issues de YouBeam](https://github.com/nullcipher-sec/Youbeam/issues).
+- Las tareas de cada área están en los Issues de su respectivo proyecto.
 - Ninguna clave privada ni archivo `.env` se sube a los repositorios.
