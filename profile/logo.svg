@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bg" cx="0.5" cy="0.45" r="0.75">
+      <stop offset="0" stop-color="#0F1A14"/>
+      <stop offset="1" stop-color="#05070A"/>
+    </radialGradient>
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#39FF88"/>
+      <stop offset="1" stop-color="#00D1FF"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="9" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="hexclip">
+      <path d="M256 70 L417 163 V349 L256 442 L95 349 V163 Z"/>
+    </clipPath>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <!-- lluvia binaria tenue dentro del hexágono -->
+  <g clip-path="url(#hexclip)" font-family="Menlo, monospace" font-size="22" fill="#39FF88" fill-opacity="0.13">
+    <text x="104" y="150">01101110 0110</text><text x="104" y="190">11000011 1001</text>
+    <text x="104" y="230">00110101 1100</text><text x="104" y="270">10100111 0011</text>
+    <text x="104" y="310">01011100 1010</text><text x="104" y="350">11100010 0101</text>
+    <text x="104" y="390">00101111 0110</text>
+  </g>
+  <!-- hexágono -->
+  <path d="M256 70 L417 163 V349 L256 442 L95 349 V163 Z" fill="none" stroke="url(#neon)" stroke-width="18" stroke-linejoin="round" filter="url(#glow)"/>
+  <!-- Ø : null + cipher -->
+  <g filter="url(#glow)" stroke="url(#neon)" fill="none" stroke-linecap="round">
+    <ellipse cx="256" cy="256" rx="70" ry="92" stroke-width="26"/>
+    <line x1="186" y1="358" x2="326" y2="154" stroke-width="26"/>
+  </g>
+  <!-- marcas de esquina tipo mira -->
+  <g stroke="#39FF88" stroke-width="8" stroke-linecap="round" fill="none" stroke-opacity="0.8">
+    <path d="M40 92 V40 H92"/><path d="M420 40 H472 V92"/>
+    <path d="M472 420 V472 H420"/><path d="M92 472 H40 V420"/>
+  </g>
+</svg>
